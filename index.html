@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="8.css">
+</head>
+<body>
+    <h1>Arthur Morgan</h1>
+    <div class="ball"></div>
+    <canvas id="canvas" width="350" height="400"></canvas>
+<script>
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext("2d");        
+    context.fillStyle = "red";
+    context.fillRect(30,30,150,150); // 绘制一个红色的矩形
+    context.strokeStyle = "gray";
+    context.strokeRect(35,35,150,150); // 绘制矩形的灰色边框
+
+    var startPoint = (Math.PI/180)*0;
+    var endPoint = (Math.PI/180)*360;
+    context.beginPath();
+    context.arc(200,200,100,startPoint,endPoint,true); // 开始绘制一个圆
+    context.fillStyle = "orange";
+    context.fill(); // 填充圆为橙色
+    context.strokeStyle = "gray"; // 设置圆的边框颜色为灰色，这里修正了 strokeStyle 的调用方式
+    context.stroke();// 绘制圆的边框
+    
+    context.beginPath();
+    context.moveTo(0,0);
+    context.lineTo(60,60);
+    context.lineWidth=10;
+    context.strokeStyle = "black";
+    context.stroke();
+
+    context.beginPath();
+    context.moveTo(20,30);
+    context.lineTo(350,100);
+    context.lineTo(250,400);
+    context.fillStyle = "rgba(0,0,155,0.5)";
+    context.fill(); // 填充多边形为半透明的蓝色
+
+    var img=new Image();
+    img.src="test/3.jpg";
+    img.onload=function(){
+        context.drawImage(img,0,250,200,200); // 绘制图片
+        context.drawImage(img,0,130,180,180,250,300,100,100)
+    }
+
+    var img2=new Image();
+    img2.src="test/2.jpg";
+
+    var width=200;
+    var height=200;
+    
+    var frames=5;
+    var currentFrame=0;
+
+    var draw = function(){
+        context.clearRect(0,250,width,height);
+        context.drawImage(img2,
+        width * currentFrame,
+        0,
+        width,height,
+        0,250,
+        width,height);
+
+    if(currentFrame == frames){
+        currentFrame=0;
+    } else {
+        currentFrame++;
+    }
+    };
+
+    setInterval(draw, 300);
+
+</script>
+
+</body>
+</html>
