@@ -10,10 +10,38 @@
             padding: 0;
             background-color: #f9f9f9;
         }
+@media only screen and (max-width: 600px) {
+    .flyer {
+        margin: 0 10px; /* 减少左右边距 */
+    }
+
+    .section, .commitment {
+        flex: 1 1 100%; /* 每个部分占满一行 */
+        margin: 10px 0; /* 调整上下边距 */
+    }
+
+    .section-title, .contact-title {
+        font-size: 24px; /* 增加字体大小 */
+    }
+
+    .service-item b, .service-item span {
+        display: block; /* 在小屏幕上将文本块级显示 */
+        margin-right: 0; /* 清除右边距 */
+    }
+
+    .contact-item {
+        flex-direction: column; /* 将联系信息垂直排列 */
+        align-items: flex-start; /* 左对齐 */
+    }
+
+    .icon {
+        margin-bottom: 5px; /* 为图标添加底部间距 */
+    }
+}
 
         .flyer {
             width: 100%;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             background-color: white;
             box-shadow: 0 0 15px rgba(0,0,0,0.1);
