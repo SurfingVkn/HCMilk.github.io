@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <title>家庭关系支持计划</title>
     <style>
         body {
             font-family: 'Microsoft YaHei', sans-serif;
@@ -8,6 +10,7 @@
             padding: 0;
             background-color: #f9f9f9;
         }
+
         .flyer {
             width: 100%;
             max-width: 800px;
@@ -17,33 +20,42 @@
             border-radius: 8px;
             overflow: hidden;
         }
+
         .header {
             background: linear-gradient(135deg, #6a8eae 0%, #4b6cb7 100%);
             color: white;
             padding: 30px;
             text-align: center;
         }
+
+        .title, .subtitle {
+            padding: 0 15px;
+        }
+
         .title {
             font-size: 28px;
             font-weight: bold;
             margin-bottom: 5px;
         }
+
         .subtitle {
             font-size: 18px;
-            margin-top: 0;
         }
+
         .content {
-            padding: 20px 30px;
             display: flex;
             flex-wrap: wrap;
+            padding: 20px 30px;
         }
+
         .section {
-            flex: 1 1 350px;
+            flex: 1 1 45%;
             margin: 10px;
             padding: 15px;
             border-radius: 8px;
             background-color: #f5f9ff;
         }
+
         .section-title {
             color: #4b6cb7;
             font-size: 18px;
@@ -52,16 +64,19 @@
             display: flex;
             align-items: center;
         }
+
         .section-title::before {
             content: "❖";
             margin-right: 8px;
             color: #6a8eae;
         }
+
         .service-item {
             margin: 10px 0;
             display: flex;
             align-items: flex-start;
         }
+
         .service-item::before {
             content: "✓";
             color: #5cb85c;
@@ -69,6 +84,15 @@
             margin-right: 10px;
             flex-shrink: 0;
         }
+
+        .service-item b {
+            margin-right: 5px;
+        }
+
+        .service-item span {
+            margin-right: 5px;
+        }
+
         .contact {
             background-color: #e8f4f8;
             padding: 20px;
@@ -76,33 +100,40 @@
             border-radius: 8px;
             margin: 15px;
         }
+
         .contact-title {
             color: #4b6cb7;
             font-size: 18px;
             font-weight: bold;
             margin-bottom: 15px;
         }
+
         .contact-info {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
         }
+
         .contact-item {
             margin: 10px 15px;
             display: flex;
             align-items: center;
         }
+
         .icon {
             font-size: 20px;
             margin-right: 8px;
             color: #4b6cb7;
         }
+
         .commitment {
-            background-color: #fff8e8;
-            border-radius: 8px;
-            margin: 15px;
+            flex: 1 1 45%;
+            margin: 10px;
             padding: 15px;
+            border-radius: 8px;
+            background-color: #fff8e8;
         }
+
         .footer {
             background-color: #f0f5ff;
             padding: 15px;
@@ -110,15 +141,83 @@
             font-size: 14px;
             color: #555;
         }
+
         .highlight {
             color: #d9534f;
             font-weight: bold;
         }
+
         hr {
             border: none;
             height: 1px;
             background-color: #e0e0e0;
             margin: 20px 0;
+        }
+
+        /* 打印样式 */
+        @media print {
+            body {
+                font-size: 12px;
+                margin: 0;
+                padding: 0;
+            }
+
+            .flyer {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                box-shadow: none;
+                border-radius: 0;
+                overflow: visible;
+            }
+
+            .header, .footer, .contact {
+                padding: 10px;
+            }
+
+            .content {
+                padding: 10px;
+            }
+
+            .section, .commitment {
+                flex: 1 1 45%;
+                margin: 10px;
+                padding: 10px;
+            }
+
+            .section-title {
+                font-size: 16px;
+                margin-bottom: 8px;
+            }
+
+            .service-item {
+                margin: 5px 0;
+            }
+
+            .service-item b {
+                margin-right: 5px;
+            }
+
+            .service-item span {
+                margin-right: 5px;
+            }
+
+            .contact-item {
+                margin: 5px 10px;
+            }
+
+            .icon {
+                font-size: 18px;
+            }
+
+            .footer div {
+                margin-top: 5px;
+            }
+
+            /* 隐藏不必要的元素（如页脚的特殊样式） */
+            .footer div[style] {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -133,16 +232,16 @@
             <div class="section">
                 <div class="section-title">我们能免费为您提供</div>
                 <div class="service-item">
-                    <div><b>家庭沟通技巧练习</b><br>学习非暴力沟通、情绪管理方法</div>
+                    <b>家庭沟通技巧练习</b>学习非暴力沟通、情绪管理方法
                 </div>
                 <div class="service-item">
-                    <div><b>家庭关系辅导咨询</b><br>真诚为您排忧解难，严守保密原则</div>
+                    <b>家庭关系辅导咨询</b>真诚为您排忧解难，严守保密原则
                 </div>
                 <div class="service-item">
-                    <div><b>家庭压力疏导支持</b><br>帮助疏导因家庭而导致的情绪压力</div>
+                    <b>家庭压力疏导支持</b>帮助疏导因家庭而导致的情绪压力
                 </div>
                 <div class="service-item">
-                    <div><b>本地专业机构转介</b><br>法律援助/心理咨询/紧急庇护资源</div>
+                    <b>本地专业机构转介</b>法律援助/心理咨询/紧急庇护资源
                 </div>
             </div>
             
@@ -160,11 +259,19 @@
                 <div class="service-item">因家庭原因而寻求情绪压力疏导支持的个体（无论性别）</div>
             </div>
             
+            <div class="commitment">
+                <div class="section-title">郑重承诺</div>
+                <div class="service-item"><b>隐私保护：</b>所有信息脱敏处理，签署保密协议</div>
+                <div class="service-item"><b>伦理合规：</b>发现高危情况将立即转介专业机构</div>
+                <div class="service-item"><b>学术用途：</b>案例仅用于课堂模拟</div>
+                <div class="service-item"><b>反对性别偏见：</b>平等服务所有性别求助者</div>
+            </div>
+            
             <div class="contact">
                 <div class="contact-title">如何联系我们</div>
                 <div class="contact-info">
                     <div class="contact-item">
-                        <span class="icon">✉</span> 匿名咨询邮箱：2802134121@qq.com
+                        <span class="icon">✉</span> <a href="mailto:2802134121@qq.com?subject=关于家庭关系支持计划的咨询&body=您好，请咨询关于家庭关系支持计划的详细信息。">匿名咨询邮箱：2802134121@qq.com</a>
                     </div>
                     <div class="contact-item">
                         <span class="icon">☎</span> 我们的电话：17823120715
@@ -174,18 +281,10 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="commitment">
-                <div class="section-title">郑重承诺</div>
-                <div class="service-item"><b>隐私保护：</b>所有信息脱敏处理，签署保密协议</div>
-                <div class="service-item"><b>伦理合规：</b>发现高危情况将立即转介专业机构</div>
-                <div class="service-item"><b>学术用途：</b>案例仅用于课堂模拟</div>
-                <div class="service-item"><b>反对性别偏见：</b>平等服务所有性别求助者</div>
-            </div>
         </div>
         
         <div class="footer">
-            <div><b>合作支持机构</b></div>
+            <b>合作支持机构</b>
             <div>重庆妇联12338妇女维权热线 | 重庆市巴南区民政局婚姻登记处</div>
             <div>学生团队督导：重庆理工大学社会工作系吕悦老师</div>
             <div style="margin-top: 10px; font-style: italic;">家，是情感的港湾。我们愿与您一起，共建和谐温馨的家庭关系。</div>
