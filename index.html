@@ -11,7 +11,7 @@
             padding: 0;
             background-color: #f9f9f9;
         }
-
+    
         .flyer {
             width: 100%;
             max-width: 900px;
@@ -21,34 +21,34 @@
             border-radius: 8px;
             overflow: hidden;
         }
-
+    
         .header {
             background: linear-gradient(135deg, #6a8eae 0%, #4b6cb7 100%);
             color: white;
             padding: 30px;
             text-align: center;
         }
-
+    
         .title, .subtitle {
             padding: 0 15px;
         }
-
+    
         .title {
             font-size: 28px;
             font-weight: bold;
             margin-bottom: 5px;
         }
-
+    
         .subtitle {
             font-size: 18px;
         }
-
+    
         .content {
             display: flex;
             flex-wrap: wrap;
             padding: 20px 30px;
         }
-
+    
         .section {
             flex: 1 1 45%;
             margin: 10px;
@@ -56,7 +56,7 @@
             border-radius: 8px;
             background-color: #f5f9ff;
         }
-
+    
         .section-title {
             color: #4b6cb7;
             font-size: 18px;
@@ -65,19 +65,19 @@
             display: flex;
             align-items: center;
         }
-
+    
         .section-title::before {
             content: "❖";
             margin-right: 8px;
             color: #6a8eae;
         }
-
+    
         .service-item {
             margin: 10px 0;
             display: flex;
             align-items: flex-start;
         }
-
+    
         .service-item::before {
             content: "✓";
             color: #5cb85c;
@@ -85,15 +85,15 @@
             margin-right: 10px;
             flex-shrink: 0;
         }
-
+    
         .service-item b {
             margin-right: 5px;
         }
-
+    
         .service-item span {
             margin-right: 5px;
         }
-
+    
         .contact {
             background-color: #e8f4f8;
             padding: 20px;
@@ -101,32 +101,32 @@
             border-radius: 8px;
             margin: 15px;
         }
-
+    
         .contact-title {
             color: #4b6cb7;
             font-size: 18px;
             font-weight: bold;
             margin-bottom: 15px;
         }
-
+    
         .contact-info {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
         }
-
+    
         .contact-item {
             margin: 10px 15px;
             display: flex;
             align-items: center;
         }
-
+    
         .icon {
             font-size: 20px;
             margin-right: 8px;
             color: #4b6cb7;
         }
-
+    
         .commitment {
             flex: 1 1 45%;
             margin: 10px;
@@ -134,7 +134,7 @@
             border-radius: 8px;
             background-color: #fff8e8;
         }
-
+    
         .footer {
             background-color: #f0f5ff;
             padding: 15px;
@@ -142,26 +142,26 @@
             font-size: 14px;
             color: #555;
         }
-
+    
         .highlight {
             color: #d9534f;
             font-weight: bold;
         }
-
+    
         hr {
             border: none;
             height: 1px;
             background-color: #e0e0e0;
             margin: 20px 0;
         }
-
+    
         /* 电脑端样式 */
         @media (min-width: 768px) {
             .flyer {
                 margin: 0 auto 0 auto;
                 padding: 0 20px;
             }
-
+    
             .section, .commitment {
                 flex: 1 1 45%;
                 margin: 10px;
@@ -169,14 +169,22 @@
                 border-radius: 8px;
                 background-color: #f5f9ff;
             }
-
+    
             .contact-item {
                 margin: 10px 15px;
                 display: flex;
                 align-items: center;
             }
         }
-
+    
+        /* 移动端样式 */
+        @media (max-width: 767px) {
+            .section, .commitment {
+                flex-basis: 85%; /* 增加宽度 */
+                margin: 10px auto; /* 使块居中 */
+            }
+        }
+    
         /* 打印样式 */
         @media print {
             body {
@@ -184,7 +192,7 @@
                 margin: 0;
                 padding: 0;
             }
-
+    
             .flyer {
                 width: 100%;
                 margin: 0;
@@ -193,56 +201,57 @@
                 border-radius: 0;
                 overflow: visible;
             }
-
+    
             .header, .footer, .contact {
                 padding: 10px;
             }
-
+    
             .content {
                 padding: 10px;
             }
-
+    
             .section, .commitment {
                 flex: 1 1 45%;
                 margin: 10px;
                 padding: 10px;
             }
-
+    
             .section-title {
                 font-size: 16px;
                 margin-bottom: 8px;
             }
-
+    
             .service-item {
                 margin: 5px 0;
             }
-
+    
             .service-item b {
                 margin-right: 5px;
             }
-
+    
             .service-item span {
                 margin-right: 5px;
             }
-
+    
             .contact-item {
                 margin: 5px 10px;
             }
-
+    
             .icon {
                 font-size: 18px;
             }
-
+    
             .footer div {
                 margin-top: 5px;
             }
-
+    
             /* 隐藏不必要的元素（如页脚的特殊样式） */
             .footer div[style] {
                 display: none;
             }
         }
     </style>
+    
 </head>
 <body>
     <div class="flyer">
@@ -255,13 +264,13 @@
             <div class="section">
                 <div class="section-title">我们能免费为您提供</div>
                 <div class="service-item">
-                    <b>家庭沟通 技巧练习</b>学习非暴力沟通、情绪管理方法
+                    <b>家庭沟通技巧练习</b>学习非暴力沟通、情绪管理方法
                 </div>
                 <div class="service-item">
-                    <b>家庭关系 辅导咨询</b>真诚为您排忧解难，严守保密原则
+                    <b>家庭关系辅导咨询</b>真诚为您排忧解难，严守保密原则
                 </div>
                 <div class="service-item">
-                    <b>家庭压力 疏导支持</b>帮助疏导因家庭而导致的情绪压力
+                    <b>家庭压力疏导支持</b>帮助疏导因家庭而导致的情绪压力
                 </div>
             </div>
             
