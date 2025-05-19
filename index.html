@@ -11,7 +11,6 @@
             padding: 0;
             background-color: #f9f9f9;
         }
-    
         .flyer {
             width: 100%;
             max-width: 900px;
@@ -21,34 +20,28 @@
             border-radius: 8px;
             overflow: hidden;
         }
-    
         .header {
             background: linear-gradient(135deg, #6a8eae 0%, #4b6cb7 100%);
             color: white;
             padding: 30px;
             text-align: center;
         }
-    
         .title, .subtitle {
             padding: 0 15px;
         }
-    
         .title {
             font-size: 28px;
             font-weight: bold;
             margin-bottom: 5px;
         }
-    
         .subtitle {
             font-size: 18px;
         }
-    
         .content {
             display: flex;
             flex-wrap: wrap;
             padding: 20px 30px;
         }
-    
         .section {
             flex: 1 1 45%;
             margin: 10px;
@@ -56,7 +49,6 @@
             border-radius: 8px;
             background-color: #f5f9ff;
         }
-    
         .section-title {
             color: #4b6cb7;
             font-size: 18px;
@@ -65,19 +57,16 @@
             display: flex;
             align-items: center;
         }
-    
         .section-title::before {
             content: "❖";
             margin-right: 8px;
             color: #6a8eae;
         }
-    
         .service-item {
             margin: 10px 0;
             display: flex;
             align-items: flex-start;
         }
-    
         .service-item::before {
             content: "✓";
             color: #5cb85c;
@@ -85,16 +74,13 @@
             margin-right: 10px;
             flex-shrink: 0;
         }
-    
         .service-item b {
             margin-right: 5px;
             white-space: nowrap;
         }
-    
         .service-item span {
             margin-right: 5px;
         }
-    
         .contact {
             background-color: #e8f4f8;
             padding: 20px;
@@ -102,32 +88,27 @@
             border-radius: 8px;
             margin: 15px;
         }
-    
         .contact-title {
             color: #4b6cb7;
             font-size: 18px;
             font-weight: bold;
             margin-bottom: 15px;
         }
-    
         .contact-info {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
         }
-    
         .contact-item {
             margin: 10px 15px;
             display: flex;
             align-items: center;
         }
-    
         .icon {
             font-size: 20px;
             margin-right: 8px;
             color: #4b6cb7;
         }
-    
         .commitment {
             flex: 1 1 45%;
             margin: 10px;
@@ -135,7 +116,6 @@
             border-radius: 8px;
             background-color: #fff8e8;
         }
-    
         .footer {
             background-color: #f0f5ff;
             padding: 15px;
@@ -143,26 +123,37 @@
             font-size: 14px;
             color: #555;
         }
-    
         .highlight {
             color: #d9534f;
             font-weight: bold;
         }
-    
         hr {
             border: none;
             height: 1px;
             background-color: #e0e0e0;
             margin: 20px 0;
         }
-    
+        .survey-link {
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            background-color: #4b6cb7;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .survey-link:hover {
+            background-color: #6a8eae;
+        }
         /* 电脑端样式 */
         @media (min-width: 768px) {
             .flyer {
                 margin: 0 auto 0 auto;
                 padding: 0 20px;
             }
-    
             .section, .commitment {
                 flex: 1 1 45%;
                 margin: 10px;
@@ -170,14 +161,12 @@
                 border-radius: 8px;
                 background-color: #f5f9ff;
             }
-    
             .contact-item {
                 margin: 10px 15px;
                 display: flex;
                 align-items: center;
             }
         }
-    
         /* 移动端样式 */
         @media (max-width: 767px) {
             .section, .commitment {
@@ -187,8 +176,11 @@
             .content {
                 padding: 20px 5px;
             }
+            .survey-link {
+                padding: 10px 20px;
+                font-size: 16px;
+            }
         }
-    
         /* 打印样式 */
         @media print {
             body {
@@ -196,7 +188,6 @@
                 margin: 0;
                 padding: 0;
             }
-    
             .flyer {
                 width: 100%;
                 margin: 0;
@@ -205,57 +196,48 @@
                 border-radius: 0;
                 overflow: visible;
             }
-    
             .header, .footer, .contact {
                 padding: 10px;
             }
-    
             .content {
                 padding: 10px;
             }
-    
             .section, .commitment {
                 flex: 1 1 45%;
                 margin: 10px;
                 padding: 10px;
             }
-    
             .section-title {
                 font-size: 16px;
                 margin-bottom: 8px;
             }
-    
             .service-item {
                 margin: 5px 0;
             }
-    
             .service-item b {
                 margin-right: 5px;
             }
-    
             .service-item span {
                 margin-right: 5px;
             }
-    
             .contact-item {
                 margin: 5px 10px;
             }
-    
             .icon {
                 font-size: 18px;
             }
-    
             .footer div {
                 margin-top: 5px;
             }
-    
             /* 隐藏不必要的元素（如页脚的特殊样式） */
             .footer div[style] {
                 display: none;
             }
+            .survey-link {
+                display: none; /* 打印时隐藏问卷链接 */
+            }
         }
     </style>
-    
 </head>
 <body>
     <div class="flyer">
@@ -264,6 +246,8 @@
             <div class="subtitle">重庆理工大学社工专业公益服务</div>
         </div>
         
+        <a href="https://www.wjx.cn/vm/QTomwVb.aspx# " target="_blank" class="survey-link">点击这里填写问卷</a>
+
         <div class="content">
             <div class="section">
                 <div class="section-title">我们能免费为您提供</div>
@@ -304,10 +288,10 @@
                 <div class="contact-title">如何联系我们</div>
                 <div class="contact-info">
                     <div class="contact-item">
-                        <span class="icon">✉</span> <a href="mailto:2802134121@qq.com?subject=关于家庭关系支持计划的咨询&body=您好，请咨询关于家庭关系支持计划的详细信息。">匿名咨询邮箱：2802134121@qq.com</a>
+                        <span class="icon">☎</span> 我们的电话：17823120715
                     </div>
                     <div class="contact-item">
-                        <span class="icon">☎</span> 我们的电话：17823120715
+                        <span class="icon">✉</span> <a href="mailto:2802134121@qq.com?subject=关于家庭关系支持计划的咨询&body=您好，请咨询关于家庭关系支持计划的详细信息。">匿名咨询邮箱：2802134121@qq.com</a>
                     </div>
                     <div class="contact-item">
                         <span class="icon">⚠</span> 如您遇到紧急情况，请联系 <span class="highlight">12338</span>
@@ -315,6 +299,7 @@
                 </div>
             </div>
         </div>
+        
         
         <div class="footer">
             <b>合作支持机构</b>
